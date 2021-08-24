@@ -275,12 +275,12 @@
 }
 
 .timeline .widget-header .title {
-    color: #2c304d;
+    color: rgb(60, 70, 75);
     font-size: 1rem
 }
 
 .timeline .widget-header .username {
-    color: #e76c90
+    color: rgb(75, 185, 185);
 }
 
 .timeline .widget-header .time {
