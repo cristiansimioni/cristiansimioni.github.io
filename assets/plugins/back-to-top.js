@@ -10,7 +10,7 @@ var scrolltotop={
 	//scrollto: Keyword (Integer, or "Scroll_to_Element_ID"). How far to scroll document up when control is clicked on (0=top).
 	setting: {startline:100, scrollto: 0, scrollduration:1000, fadeduration:[500, 100]},
 	//controlHTML: '<i class="fa fa-angle-up"></i>', //HTML for control, which is auto wrapped in DIV w/ ID="topcontrol"
-	controlHTML: '<i class="fas fa-angle-up"></i>', //Updated to work with FontAwesome 5
+	controlHTML: '<i class="fas fa-angle-up d-print-none"></i>', //Updated to work with FontAwesome 5
 	
 	
 	controlattrs: {offsetx:5, offsety:5}, //offset of control relative to right/ bottom of window corner
