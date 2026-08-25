@@ -1,0 +1,82 @@
+@media print {
+  @page { size: A4; margin: 10mm 0; }
+  @page :first { margin-top: 0; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  #topcontrol { display: none !important; }
+
+  /* Some com os botões no print, mas mantenha o layout */
+  .header-intro .page-heading, 
+  .btn,
+  .download-resume { display: none !important; }
+
+  .header-intro {
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+  }
+
+  .resume-wrapper { margin-top: 0 !important; }
+
+  .resume-header > .media,
+  .resume-header .media-body {
+    flex-direction: row !important;
+  }
+
+  .resume-header,
+  .resume-header > .media {
+    height: 220px !important;
+  }
+
+  .resume-header {
+    padding-top: 0 !important;
+  }
+
+  .resume-header .picture {
+    width: 220px !important;
+    max-width: 220px !important;
+    flex: 0 0 220px !important;
+    margin-left: 0 !important;
+    margin-right: 2rem !important;
+    margin-top: 0 !important;
+  }
+
+  .resume-header .secondary-info {
+    margin-left: auto !important;
+    padding-left: 2rem !important;
+  }
+
+  /* Remover sombras/alturas mínimas que criam “buraco” */
+  .resume-wrapper-inner,
+  .resume-wrapper,
+  .resume-body {
+    box-shadow: none !important;
+    height: auto !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .resume-wrapper-inner { width: 100% !important; }
+
+  /* Duas colunas (conteúdo + skills) no restante da página */
+  .resume-body .row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start;
+    gap: 8mm;
+  }
+  .resume-body .col-lg-9 { flex: 0 0 calc(70% - 4mm) !important; max-width: calc(70% - 4mm) !important; }
+  .resume-body .col-lg-3 { flex: 0 0 calc(30% - 4mm) !important; max-width: calc(30% - 4mm) !important; }
+
+  /* Elementos não estourarem a coluna */
+  .resume-section img,
+  .resume-section .progress,
+  .resume-section .progress-bar {
+    max-width: 100% !important;
+  }
+
+  /* Tirar URLs automáticas e cabeçalhos do navegador */
+  a[href]:after { content: none !important; }
+}
